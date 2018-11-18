@@ -1,3 +1,5 @@
+
+
 const menu = {
   _courses: {
     appetizers: [],
@@ -46,22 +48,22 @@ const menu = {
     const main = this.getRandomDishFromCourse('mains');
     const dessert = this.getRandomDishFromCourse('desserts');
     const totalPrice = appetizer.price + main.price + dessert.price;
-    return `Your order is: ${appetizer.name}, ${main.name}, ${dessert.name} and total price is: $${totalPrice}`;
+    return `Your order is: ${appetizer.name}, ${main.name}, ${dessert.name} and total price is: $${totalPrice.toFixed(2)}`;
   }
 };
 
 
-menu.addDishToCourse('appetizers', 'wings', 10);
-menu.addDishToCourse('appetizers', 'nachos', 9);
-menu.addDishToCourse('appetizers', 'mozz sticks', 8);
+menu.addDishToCourse('appetizers', 'wings', 9.99);
+menu.addDishToCourse('appetizers', 'nachos', 8.99);
+menu.addDishToCourse('appetizers', 'mozz sticks', 7.99);
 
-menu.addDishToCourse('mains', 'steak', 20);
-menu.addDishToCourse('mains', 'spaghetti', 17);
-menu.addDishToCourse('mains', 'seafood', 18);
+menu.addDishToCourse('mains', 'steak', 19.99);
+menu.addDishToCourse('mains', 'spaghetti', 17.99);
+menu.addDishToCourse('mains', 'seafood', 18.99);
 
-menu.addDishToCourse('desserts', 'icecream', 5);
-menu.addDishToCourse('desserts', 'brownies', 5);
-menu.addDishToCourse('desserts', 'coffee and tea', 5);
+menu.addDishToCourse('desserts', 'icecream', 3.50);
+menu.addDishToCourse('desserts', 'brownies', 5.49);
+menu.addDishToCourse('desserts', 'coffee and tea', 5.99);
 
 
 const meal = menu.generateRandomMeal();
